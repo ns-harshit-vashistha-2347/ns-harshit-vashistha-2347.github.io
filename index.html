@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harshit Vashistha — AI Engineer</title>
+<meta name="description" content="Harshit Vashistha builds LLM applications, retrieval systems, voice automation and machine learning models with Python.">
+<meta property="og:title" content="Harshit Vashistha — AI Engineer">
+<meta property="og:description" content="AI engineering portfolio covering LLM applications, retrieval, voice automation and applied machine learning.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2315161A'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='700' font-size='28' fill='%23fff'%3EHV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F6F3; --surface:#FFFFFF; --soft:#FAFAF8; --ink:#15161A; --body:#3D3F47; --muted:#555862;
+  --line:#DDDDD6; --accent:#2F4BC9; --accent-ink:#1E3394; --chip-bg:#ECEEF9; --chip-ink:#2B3A8C;
+  --dark:#15161A; --dark-body:#C9CAD1; --dark-line:#34363F; --dark-accent:#A9B6FF;
+  --display:'Space Grotesk',system-ui,sans-serif; --sans:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-ink);text-decoration:underline}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono)}
+.eyebrow{font-family:var(--mono);font-size:13px;font-weight:500;color:var(--accent);letter-spacing:.02em}
+h1,h2,h3{font-family:var(--display);margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(30px,4vw,40px);line-height:1.15}
+p{margin:0}
+section{scroll-margin-top:72px}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:10;background:rgba(246,246,243,.88);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+.site-header.scrolled{border-bottom-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--display);font-weight:700;font-size:20px;color:var(--ink)}
+.logo span{color:var(--accent)}
+.logo:hover{text-decoration:none;color:var(--ink)}
+.nav-links{display:flex;gap:28px;font-size:15px;font-weight:500}
+.nav-links a{color:var(--body)}
+.nav-links a:hover{color:var(--ink);text-decoration:none}
+.menu-btn{display:none;background:none;border:0;width:44px;height:44px;border-radius:8px;cursor:pointer;color:var(--ink)}
+@media (max-width:720px){
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 24px 16px}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:12px 0}
+}
+
+/* buttons */
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 22px;border-radius:10px;font-weight:600;font-size:15px;border:1.5px solid var(--ink);color:var(--ink);background:transparent;transition:transform .15s,background .15s}
+.btn:hover{text-decoration:none;transform:translateY(-1px);color:var(--ink);background:#fff}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.primary:hover{background:#000;color:#fff}
+.btn.accent{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.accent:hover{background:var(--accent-ink);border-color:var(--accent-ink);color:#fff}
+.btn svg{width:18px;height:18px}
+
+/* hero */
+.hero{padding:72px 0 80px}
+.hero .wrap{display:flex;flex-direction:column;gap:26px}
+.hero h1{font-size:clamp(38px,6vw,72px);line-height:1.03;letter-spacing:-.025em;max-width:940px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.lede{font-size:clamp(17px,2vw,19px);color:var(--body);max-width:700px}
+.status{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.dot{width:8px;height:8px;border-radius:50%;background:#16A34A;box-shadow:0 0 0 4px rgba(22,163,74,.15)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:36px;border-top:1px solid var(--line)}
+.stat{padding:22px 20px 0 0}
+.stat b{display:block;font-family:var(--display);font-size:clamp(26px,3vw,34px);font-weight:600;line-height:1.1}
+.stat span{font-size:14px;color:var(--muted)}
+@media (max-width:720px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* sections */
+.band{background:var(--surface);border-top:1px solid #E4E4DE;border-bottom:1px solid #E4E4DE}
+.sec{padding:88px 0}
+.sec-head{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-end;margin-bottom:36px}
+.sec-head > div:not(.filters){display:flex;flex-direction:column;gap:10px}
+
+/* filters */
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filter{min-height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:var(--soft);font:500 14px var(--sans);color:var(--body);cursor:pointer}
+.filter:hover{border-color:var(--ink)}
+.filter[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+
+/* project cards */
+.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+@media (max-width:860px){.projects{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column;gap:14px;padding:30px;border-radius:16px;border:1px solid #E0E0DA;background:var(--soft);transition:border-color .2s,transform .2s}
+.card:hover{border-color:#B9B9B1;transform:translateY(-2px)}
+.card[hidden]{display:none}
+.card .kicker{font-family:var(--mono);font-size:12.5px;color:var(--muted);letter-spacing:.02em}
+.card h3{font-size:24px;line-height:1.2}
+.card h3 small{display:block;font-family:var(--sans);font-size:15px;font-weight:500;color:var(--muted);margin-top:4px;letter-spacing:0}
+.card ul{margin:0;padding-left:18px;color:var(--body);font-size:15px;display:flex;flex-direction:column;gap:6px}
+.metrics{display:flex;flex-wrap:wrap;gap:10px}
+.metric{padding:10px 14px;border-radius:10px;background:#fff;border:1px solid #E6E6E0}
+.metric b{display:block;font-family:var(--display);font-size:20px;line-height:1.1;color:var(--ink)}
+.metric span{font-size:12.5px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+.chip{font-size:13px;padding:5px 10px;border-radius:6px;background:var(--chip-bg);color:var(--chip-ink)}
+.card.featured{grid-column:1/-1;background:var(--dark);color:#F2F2EE;border-color:var(--dark);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:40px}
+.card.featured:hover{border-color:var(--dark)}
+@media (max-width:860px){.card.featured{grid-template-columns:1fr}}
+.card.featured .kicker{color:var(--dark-accent)}
+.card.featured h3 small,.card.featured ul{color:var(--dark-body)}
+.card.featured .metric{background:#1F2026;border-color:var(--dark-line)}
+.card.featured .metric b{color:#fff}
+.card.featured .metric span{color:#A3A5AE}
+.card.featured .chip{background:#252737;color:#C9D0FF}
+.card .col{display:flex;flex-direction:column;gap:14px;min-width:0}
+.flow{display:flex;flex-direction:column;gap:8px;font-family:var(--mono);font-size:13px}
+.flow .label{color:#8A8C96;margin-bottom:2px}
+.flow .step{padding:12px 14px;border-radius:10px;border:1px solid var(--dark-line);color:#E1E2E7}
+.flow .step.hl{border-color:#5468E8;color:#fff}
+.flow .branch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.flow .branch .step{text-align:center;padding:10px 6px}
+.flow .arrow{color:#5D6070;text-align:center;line-height:1}
+
+/* experience */
+.exp{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:48px}
+@media (max-width:860px){.exp{grid-template-columns:1fr;gap:24px}}
+.role{display:grid;grid-template-columns:160px minmax(0,1fr);gap:8px 24px;padding:26px 0;border-top:1px solid var(--line)}
+.role:last-child{border-bottom:1px solid var(--line)}
+@media (max-width:600px){.role{grid-template-columns:1fr}}
+.role .when{font-family:var(--mono);font-size:14px;color:var(--muted)}
+.role h3{font-size:22px;margin-bottom:8px}
+.role ul{margin:0;padding-left:18px;color:var(--body);font-size:15px;display:flex;flex-direction:column;gap:6px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+@media (max-width:960px){.skills{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:540px){.skills{grid-template-columns:1fr}}
+.skills h3{font-family:var(--sans);font-size:16px;font-weight:600;margin-bottom:12px}
+.skills .chips{padding-top:0}
+.cert{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:40px;padding:20px 24px;border-radius:12px;border:1px solid #E0E0DA;background:var(--soft)}
+.cert svg{flex:none}
+
+/* contact */
+.contact h2{font-size:clamp(32px,5vw,56px);line-height:1.08;max-width:780px}
+.contact .wrap{display:flex;flex-direction:column;gap:24px}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* reveal */
+/* content stays visible if JavaScript is off: only hide when JS is running */
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .reveal{opacity:1;transform:none;transition:none}.card,.btn{transition:none}}
+.case-details{display:grid;gap:12px;margin:4px 0 6px;color:var(--body);font-size:15px;line-height:1.6}
+.case-details p{margin:0}
+.case-details strong{font-weight:600;color:var(--ink)}
+.card.featured .case-details{color:var(--dark-body)}
+.card.featured .case-details strong{color:#fff}
+
+/* one-line plain-English impact on each project, for non-technical readers */
+.impact{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:10px;background:#EEF7F0;color:#14532D;font-size:15px;font-weight:500;line-height:1.5}
+.impact svg{flex:none;margin-top:2px}
+.card.featured .impact{background:#1B2A20;color:#BBF7D0}
+
+/* skip link */
+.skip{position:absolute;left:16px;top:-48px;z-index:20;padding:10px 16px;border-radius:8px;background:var(--ink);color:#fff;font-weight:600}
+.skip:focus{top:12px;color:#fff}
+
+/* hero facts */
+.facts{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;color:var(--muted)}
+.facts span{display:inline-flex;align-items:center;gap:6px}
+.facts svg{width:16px;height:16px}
+
+/* what I bring */
+.bring{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+@media (max-width:860px){.bring{grid-template-columns:1fr}}
+.bring div{padding:24px;border-radius:14px;border:1px solid #E0E0DA;background:var(--surface)}
+.bring h3{font-size:19px;margin-bottom:8px}
+.bring p{font-size:15px;color:var(--body)}
+
+footer .links{display:flex;flex-wrap:wrap;gap:18px}
+.code-link{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;min-height:44px;font-weight:600;font-size:15px}
+
+@media print{
+  .site-header,.filters,.skip,.btns{display:none}
+  .js .reveal{opacity:1;transform:none}
+  .card,.role{break-inside:avoid}
+  .band{background:#fff}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Harshit Vashistha","jobTitle":"AI Engineer","alumniOf":"Jaypee University of Information Technology","email":"mailto:vashistha.harshit2002@gmail.com","sameAs":["https://www.linkedin.com/in/harshit-vashistha/","https://github.com/ns-harshit-vashistha-2347"],"knowsAbout":["Agentic AI","LangGraph","Retrieval-augmented generation","AI voice agents","Machine learning"]}
+</script>
+</head>
+<body>
+<a class="skip" href="#work">Skip to projects</a>
+
+<header class="site-header" id="header">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="Harshit Vashistha, home">HV<span>.</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.pdf" download="Harshit-Vashistha-Resume.pdf">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="status"><span class="dot" aria-hidden="true"></span>AI Engineer · Open to new roles · India</div>
+      <h1>I build AI that <em>answers questions, automates workflows and makes predictions.</em></h1>
+      <p class="lede">Hi, I’m Harshit Vashistha, an AI engineer with 2+ years of experience building client applications. My work spans conversational analytics, document search, voice automation and predictive ML. I build the Python services behind these products using tools like FastAPI, PostgreSQL and LangGraph.</p>
+      <div class="facts">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>India</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>Microsoft Certified Azure AI Engineer (AI-102)</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16M10 4v16"/><rect x="4" y="4" width="16" height="16" rx="3"/></svg>B.Tech CSE, JUIT (CGPA 8.3)</span>
+      </div>
+      <div class="btns">
+        <a class="btn primary" href="#work">See my work</a>
+        <a class="btn accent" href="#contact">Contact me</a>
+        <a class="btn" href="resume.pdf" download="Harshit-Vashistha-Resume.pdf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg>
+          Download resume
+        </a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>2+ yrs</b><span>shipping LLM apps to production</span></div>
+        <div class="stat"><b>95%</b><span>answer accuracy, multi-agent text-to-SQL</span></div>
+        <div class="stat"><b>2,000+</b><span>AI voice calls handled per month</span></div>
+        <div class="stat"><b>92%</b><span>top-10 accuracy, pet health ML model</span></div>
+      </div>
+      <div class="bring" style="margin-top:56px">
+        <div class="reveal"><h3>Prototype to production</h3><p>I take features all the way through: integration, prompt logic, evaluation and deployment with FastAPI, Redis and Docker. Two of the systems below are in daily client use.</p></div>
+        <div class="reveal"><h3>Answers people can check</h3><p>Hallucinations break trust, so I design for grounding: record-level citations, reranking and answer grading before anything reaches a user.</p></div>
+        <div class="reveal"><h3>Results with numbers</h3><p>I measure what I build: 95% answer accuracy, 92% top-10 accuracy, and about 80% less manual work on a calling workflow.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="band">
+    <div class="wrap sec">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">01 / SELECTED WORK</div>
+          <h2>Selected projects</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="filter" aria-pressed="true" data-filter="all">All</button>
+          <button class="filter" aria-pressed="false" data-filter="agents">Agents</button>
+          <button class="filter" aria-pressed="false" data-filter="rag">RAG</button>
+          <button class="filter" aria-pressed="false" data-filter="voice">Voice &amp; media</button>
+          <button class="filter" aria-pressed="false" data-filter="ml">ML</button>
+        </div>
+      </div>
+
+      <div class="projects">
+        <!-- Enerfrog — featured -->
+        <article class="card featured reveal" data-tags="agents">
+          <div class="col">
+            <div class="kicker">FEATURED · CLIENT PROJECT</div>
+            <h3>Enerfrog SQL Chatbot<small>Conversational analytics for energy and facilities</small></h3>
+            <p class="impact"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Facilities teams ask questions about their energy data in plain English and get answers that are correct 95% of the time, with no SQL needed.</p>
+          <div class="case-details">
+            <p><strong>Business question.</strong> A facilities team can ask which site had the highest average electricity usage in a given month. The supervisor extracts the utility type, reporting period and requested comparison from the question and conversation history, then routes the request to the relevant specialist.</p>
+            <p><strong>SQL validation and retry.</strong> The query workflow loads the PostgreSQL schema and table relationships before generating SQL. For a usage comparison, it joins utility bills to facility records, filters by billing period and utility type, then groups and ranks facilities by average usage. An EXPLAIN step checks the query before execution and feeds errors back into a bounded retry loop.</p>
+            <p><strong>Weather context and provenance.</strong> The weather workflow maps facilities to stations and aggregates heating and cooling degree days when a question calls for weather context. The answer includes source-record IDs so users can trace the result back to the underlying data.</p>
+          </div>
+            <div class="metrics">
+              <div class="metric"><b>95%</b><span>answer accuracy</span></div>
+              <div class="metric"><b>15</b><span>tables queried</span></div>
+            </div>
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">LangGraph</span><span class="chip">OpenAI</span><span class="chip">Gemini</span><span class="chip">MCP</span><span class="chip">PostgreSQL</span>
+            </div>
+          </div>
+          <div class="flow" aria-label="Analytics architecture from user question to cited answer">
+            <div class="label">architecture</div>
+            <div class="step">User question + chat history</div>
+            <div class="arrow" aria-hidden="true">↓</div>
+            <div class="step hl">Orchestrator · intent &amp; entity extraction → shared state</div>
+            <div class="arrow" aria-hidden="true">↓</div>
+            <div class="branch">
+              <div class="step">Facilities</div><div class="step">Weather</div><div class="step">Emissions</div><div class="step">Savings</div>
+            </div>
+            <div class="arrow" aria-hidden="true">↓</div>
+            <div class="step">MCP tools · SQL validation &amp; execution</div>
+            <div class="arrow" aria-hidden="true">↓</div>
+            <div class="step hl">Answer + record-level citations</div>
+          </div>
+        </article>
+
+        <!-- Steadywell -->
+        <article class="card reveal" data-tags="voice agents">
+          <div class="kicker">CLIENT PROJECT · AI VOICE</div>
+          <h3>Steadywell OS<small>Voice automation for patient outreach and scheduling</small></h3>
+          <p class="impact"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>An AI agent now makes 2,000+ appointment calls a month, cutting manual scheduling work by about 80%.</p>
+          <div class="case-details">
+            <p><strong>From scheduling event to call.</strong> Scheduling events trigger outbound calls for booking, confirmation or rescheduling. The FastAPI workflow records the call in PostgreSQL so the voice provider’s webhook can update the same record when the conversation ends.</p>
+            <p><strong>Availability and follow-up.</strong> The scheduling integration uses Cal.com to look up open slots and create bookings. The backend classifies call outcomes and uses them to decide whether a follow-up is needed. Call windows and daily call limits constrain when the system can reach out.</p>
+          </div>
+          <div class="metrics">
+            <div class="metric"><b>2,000+</b><span>calls / month</span></div>
+            <div class="metric"><b>~80%</b><span>less manual work</span></div>
+          </div>
+          <div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">OpenAI</span><span class="chip">VAPI</span><span class="chip">Retell AI</span><span class="chip">Cal.com</span></div>
+        </article>
+
+        <!-- Dyre ID -->
+        <article class="card reveal" data-tags="ml">
+          <div class="kicker">CLIENT PROJECT · IN PRODUCTION</div>
+          <h3>Dyre ID<small>Ranked health condition predictions for dogs and cats</small></h3>
+          <p class="impact"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>The models are now in production with the client. In testing, for 92% of pets the actual condition appears in the model's top-10 risk list.</p>
+          <div class="case-details">
+            <p><strong>From records to model inputs.</strong> I used exploratory data analysis and preprocessing to turn veterinary and behavioural records into 30+ features for model training. The pipeline converts source observations into structured inputs the model can use to score candidate conditions.</p>
+            <p><strong>Ranking and validation.</strong> The model returns a ranked shortlist of ten conditions for each pet. Top-10 accuracy measures whether the reference condition appears anywhere in that shortlist. Veterinary experts reviewed predictions before the client deployed the models.</p>
+          </div>
+          <div class="metrics">
+            <div class="metric"><b>92%</b><span>top-10 accuracy</span></div>
+            <div class="metric"><b>200K+</b><span>records</span></div>
+            <div class="metric"><b>30+</b><span>features</span></div>
+          </div>
+          <div class="chips"><span class="chip">Python</span><span class="chip">TensorFlow</span><span class="chip">Scikit-Learn</span><span class="chip">Pandas</span></div>
+        </article>
+
+        <!-- Lumen -->
+        <article class="card reveal" data-tags="rag">
+          <div class="kicker">PERSONAL PROJECT · RAG</div>
+          <h3>Lumen<small>Document Q&amp;A with retrieval and reranking</small></h3>
+          <div class="case-details">
+            <p><strong>Indexing and candidate retrieval.</strong> Documents are split into passages and embedded for similarity search. Hybrid retrieval combines keyword matches for exact terms with semantic matches for questions phrased differently from the source text.</p>
+            <p><strong>Context selection and answer grading.</strong> A reranking step scores the retrieved passages against the question before the most relevant context is passed to the LLM. The answer is graded against the retrieved context before it is returned.</p>
+          </div>
+          <div class="chips"><span class="chip">Python</span><span class="chip">RAG</span><span class="chip">Vector search</span><span class="chip">Reranking</span></div>
+          <a class="code-link" href="https://github.com/ns-harshit-vashistha-2347/lumen" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>View code on GitHub →</a>
+        </article>
+
+        <!-- AI-Hub -->
+        <article class="card reveal" data-tags="agents">
+          <div class="kicker">PERSONAL PROJECT · AGENTS</div>
+          <h3>AI-Hub<small>One local workspace for running coding agents</small></h3>
+          <div class="case-details">
+            <p><strong>Agents in one place.</strong> A local web app that runs Claude Code and OpenAI's Codex CLI from a single interface, using the accounts you're already signed in to, with no API key needed. It detects installed agents automatically and shows their real model lists, effort levels, plan usage and credits.</p>
+            <p><strong>Safe, switchable runs.</strong> Every run gets its own git worktree and branch, so the main code is never touched. A supervised mode asks for approval of each edit or command, and you can keep or discard a run's changes with one click. You can switch model, effort or agent mid-task, with a readable summary handed from one agent to the next.</p>
+            <p><strong>Every run measured.</strong> A live activity feed shows messages and tool calls, alongside cost, time and tokens for each turn. After every turn it runs your test command, counts the lines changed and shows the result in a side-by-side Monaco diff view.</p>
+            <p><strong>How a run works.</strong> Each task runs headless on its own <code>aihub/run-&lt;id&gt;</code> branch. The agent's output is converted into one shared event format, saved with event sourcing and streamed live to the UI. On an agent switch, the new agent gets the same worktree plus a handoff summary built from the event log, with a template fallback if the summary model fails. Optional API keys are kept in the OS keychain, never in the database or repo.</p>
+          </div>
+          <div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">SQLite</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">WebSockets</span><span class="chip">Git worktrees</span></div>
+          <a class="code-link" href="https://github.com/vashisthaharshit/AI-hub" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>View code on GitHub →</a>
+        </article>
+
+        <!-- Lesson-video pipeline -->
+        <article class="card reveal" data-tags="voice">
+          <div class="kicker">CLIENT PROJECT · EDUCATION</div>
+          <h3>Bilingual lesson-video pipeline<small>English–French lesson production with narration and graphics</small></h3>
+          <p class="impact"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Turns a written lesson script into a finished teaching video through one repeatable workflow, built for a 40+ lesson series.</p>
+          <div class="case-details">
+            <p><strong>Script to video.</strong> The workflow takes a lesson script through voice-cloned narration, avatar generation, subtitle timing and graphics. Narration provides the timing reference for when captions and graphics appear.</p>
+            <p><strong>Review and delivery.</strong> A React interface supports review between stages. The workflow is designed to repeat across 40+ lessons. Selective re-rendering is a planned improvement so a reviewer can flag a misaligned segment and regenerate only that part.</p>
+          </div>
+          <div class="chips"><span class="chip">Python</span><span class="chip">Qwen3-TTS</span><span class="chip">HeyGen</span><span class="chip">Playwright</span><span class="chip">Groq</span><span class="chip">Gemini</span><span class="chip">React</span></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap sec exp">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div class="eyebrow">02 / EXPERIENCE</div>
+        <h2>Where I've worked</h2>
+      </div>
+      <div>
+        <div class="role reveal">
+          <div class="when">Jul 2024 — Nov 2026</div>
+          <div>
+            <h3>AI Engineer · Netsmartz</h3>
+            <ul>
+              <li>Built and shipped LLM-powered features for client platforms end to end, including integration, prompt logic and evaluation code.</li>
+              <li>Built multi-agent systems in LangGraph with multi-step tool calling over MCP servers, response grading and Redis-backed conversation memory.</li>
+              <li>Implemented RAG pipelines on Pinecone and Chroma covering embedding, hybrid search, reranking and answer grading, to keep responses grounded.</li>
+              <li>Developed a unified model-routing layer across OpenAI and Azure OpenAI, and deployed AI services with FastAPI, Redis and Docker.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="role reveal">
+          <div class="when">Aug 2023 — Nov 2023</div>
+          <div>
+            <h3>Full Stack Developer Intern · Webcube</h3>
+            <p style="color:var(--muted);font-size:14px;margin-bottom:8px">Internship · Remote</p>
+            <ul>
+              <li>Built web application features on the MERN stack, working across the React frontend and the Node.js and Express backend.</li>
+              <li>Developed APIs that connect the frontend to MongoDB data.</li>
+            </ul>
+            <div class="chips" style="margin-top:12px">
+              <span class="chip">MongoDB</span><span class="chip">Express</span><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">REST APIs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="band">
+    <div class="wrap sec">
+      <div class="sec-head"><div>
+        <div class="eyebrow">03 / TOOLKIT</div>
+        <h2>What I work with</h2>
+      </div></div>
+      <div class="skills">
+        <div class="reveal"><h3>GenAI &amp; agents</h3><div class="chips">
+          <span class="chip">LangGraph</span><span class="chip">Multi-agent systems</span><span class="chip">Agentic AI</span><span class="chip">RAG</span><span class="chip">MCP</span><span class="chip">Prompt engineering</span><span class="chip">LLM evaluation</span><span class="chip">VAPI</span><span class="chip">Retell AI</span>
+        </div></div>
+        <div class="reveal"><h3>LLMs, vector &amp; graph DBs</h3><div class="chips">
+          <span class="chip">OpenAI</span><span class="chip">Azure OpenAI</span><span class="chip">Gemini</span><span class="chip">OpenRouter</span><span class="chip">Groq</span><span class="chip">Cerebras</span><span class="chip">Pinecone</span><span class="chip">Chroma</span><span class="chip">Weaviate</span><span class="chip">Neo4j</span><span class="chip">Kuzu</span>
+        </div></div>
+        <div class="reveal"><h3>Machine learning</h3><div class="chips">
+          <span class="chip">TensorFlow</span><span class="chip">Scikit-Learn</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Feature engineering</span><span class="chip">EDA</span>
+        </div></div>
+        <div class="reveal"><h3>Engineering &amp; cloud</h3><div class="chips">
+          <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">Docker</span><span class="chip">Azure</span>
+        </div></div>
+      </div>
+      <div class="cert reveal">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2F4BC9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>
+        <div><strong>Microsoft Certified: Azure AI Engineer Associate</strong> <span style="color:var(--muted)">(AI-102)</span></div>
+        <!-- EDIT: paste your Microsoft Learn credential URL and uncomment -->
+        <!-- <a href="https://learn.microsoft.com/api/credentials/share/..." style="margin-left:auto;font-weight:600">Verify →</a> -->
+      </div>
+    </div>
+  </section>
+
+  <section id="education" aria-labelledby="education-heading">
+    <div class="wrap sec">
+      <div class="sec-head"><div>
+        <div class="eyebrow">04 / EDUCATION</div>
+        <h2 id="education-heading">Education</h2>
+      </div></div>
+      <div>
+        <div class="role reveal">
+          <div class="when">2020 — 2024</div>
+          <div>
+            <h3>B.Tech, Computer Science</h3>
+            <p style="color:var(--body);font-size:15px">Jaypee University of Information Technology, Solan · CGPA 8.3</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap sec">
+      <div class="eyebrow">05 / CONTACT</div>
+      <h2>Let’s talk about AI engineering.</h2>
+      <p class="lede">I’m open to AI engineering roles across LLM applications, retrieval, automation and applied ML.</p>
+      <div class="btns">
+        <!-- Opens Gmail compose in a new tab: works even when the visitor has no mail app set up -->
+        <a class="btn accent" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=vashistha.harshit2002@gmail.com&amp;su=Regarding%20an%20AI%20Engineer%20role" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          Email me
+        </a>
+        <button type="button" class="btn" id="copyEmail" data-email="vashistha.harshit2002@gmail.com" style="cursor:pointer;font-family:inherit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span id="copyLabel">Copy email</span>
+        </button>
+        <a class="btn" href="https://www.linkedin.com/in/harshit-vashistha/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>
+          LinkedIn
+        </a>
+        <a class="btn" href="https://github.com/ns-harshit-vashistha-2347" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+          GitHub
+        </a>
+      </div>
+      <p style="font-size:15px;color:var(--muted)">Or write to <a href="mailto:vashistha.harshit2002@gmail.com">vashistha.harshit2002@gmail.com</a> <span id="copyStatus" role="status" aria-live="polite" style="color:#15803D;font-weight:600"></span></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Harshit Vashistha</span>
+    <span class="links">
+      <a href="mailto:vashistha.harshit2002@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/harshit-vashistha/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/ns-harshit-vashistha-2347" target="_blank" rel="noopener">GitHub</a>
+      <a href="resume.pdf" download="Harshit-Vashistha-Resume.pdf">Resume</a>
+      <a href="#top">Back to top ↑</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Header border on scroll
+  const header = document.getElementById('header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // Project filters
+  const filters = document.querySelectorAll('.filter');
+  const cards = document.querySelectorAll('.projects .card');
+  filters.forEach(btn => btn.addEventListener('click', () => {
+    const f = btn.dataset.filter;
+    filters.forEach(b => b.setAttribute('aria-pressed', b === btn));
+    cards.forEach(c => { c.hidden = !(f === 'all' || c.dataset.tags.split(' ').includes(f)); });
+  }));
+
+  // Reveal on scroll
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 }) : null;
+  document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+
+  // Copy email to clipboard, with a fallback for older browsers
+  const copyBtn = document.getElementById('copyEmail');
+  const copyLabel = document.getElementById('copyLabel');
+  const copyStatus = document.getElementById('copyStatus');
+  copyBtn.addEventListener('click', async () => {
+    const email = copyBtn.dataset.email;
+    let ok = false;
+    try { await navigator.clipboard.writeText(email); ok = true; }
+    catch (e) {
+      const t = document.createElement('textarea');
+      t.value = email; t.style.position = 'fixed'; t.style.opacity = '0';
+      document.body.appendChild(t); t.select();
+      try { ok = document.execCommand('copy'); } catch (_) {}
+      t.remove();
+    }
+    copyLabel.textContent = ok ? 'Copied!' : 'Copy failed';
+    copyStatus.textContent = ok ? '✓ Email copied to clipboard' : '';
+    setTimeout(() => { copyLabel.textContent = 'Copy email'; copyStatus.textContent = ''; }, 2500);
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

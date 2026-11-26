@@ -1,0 +1,498 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<<
+/Producer (pypdf)
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Count 1
+/Kids [ 4 0 R ]
+>>
+endobj
+3 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+/Outlines 9 0 R
+>>
+endobj
+4 0 obj
+<<
+/Contents 5 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Resources <<
+/Font 6 0 R
+/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Parent 2 0 R
+/Annots [ 10 0 R 11 0 R 12 0 R ]
+>>
+endobj
+5 0 obj
+<<
+/Length 10072
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 48.51969 777.874 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL 144.1181 0 Td (HARSHIT VASHISTHA) Tj T* -144.1181 0 Td ET
+Q
+Q
+q
+1 0 0 1 48.51969 764.374 cm
+q
+.101961 .337255 .690196 RG
+n 268.331 2.475 m 293.9188 2.475 l S
+n 301.9156 2.475 m 338.9596 2.475 l S
+n 346.9564 2.475 m 377.454 2.475 l S
+BT 1 0 0 1 0 3.7 Tm 120.7822 0 Td 13.5 TL /F2 9.8 Tf .066667 .066667 .066667 rg (AI Engineer) Tj /F1 9.8 Tf ( | +91 91939-63930 | ) Tj .101961 .337255 .690196 rg (Gmail) Tj .066667 .066667 .066667 rg ( | ) Tj .101961 .337255 .690196 rg (LinkedIn) Tj .066667 .066667 .066667 rg ( | ) Tj .101961 .337255 .690196 rg (GitHub) Tj T* -120.7822 0 Td ET
+Q
+Q
+q
+1 0 0 1 48.51969 745.374 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 2.2 Tm /F2 10.8 Tf 13 TL (SUMMARY) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 742.774 cm
+q
+.6 w
+1 J
+.066667 .066667 .066667 RG
+n 0 0 m 498.2362 0 l S
+Q
+Q
+q
+1 0 0 1 48.51969 690.374 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 40.6 Tm /F1 9.8 Tf 12.6 TL -0.064399 Tw (AI Engineer with 2+ years of experience building agentic AI systems, RAG pipelines and LLM-powered applications) Tj T* 0 Tw (for client platforms. Hands-on with multi-agent orchestration in LangGraph, MCP tool integration, AI voice) Tj T* (automation and production ML models, taking solutions from prototype to production. Microsoft Certified Azure AI) Tj T* (Engineer Associate.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 671.374 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 2.2 Tm /F2 10.8 Tf 13 TL (WORK EXPERIENCE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 668.774 cm
+q
+.6 w
+1 J
+.066667 .066667 .066667 RG
+n 0 0 m 498.2362 0 l S
+Q
+Q
+q
+1 0 0 1 48.51969 652.174 cm
+q
+BT 1 0 0 1 0 2.6 Tm 12.6 TL /F2 9.8 Tf .066667 .066667 .066667 rg (AI Engineer \227 Netsmartz ) Tj /F1 10 Tf (| 2024 \226 Nov 2026) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 626.974 cm
+BT /F1 7 Tf 8.4 TL ET
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 58.51969 626.974 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 15.4 Tm /F1 9.8 Tf 12.6 TL (Built and shipped LLM-powered features for client platforms end to end, writing the integration, prompt logic and) Tj T* (evaluation code through to production.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 601.274 cm
+BT /F1 7 Tf 8.4 TL ET
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 58.51969 601.274 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 15.4 Tm /F1 9.8 Tf 12.6 TL (Built multi-agent systems in LangGraph with multi-step tool calling over MCP servers, response grading and) Tj T* (Redis-backed conversation memory.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 575.574 cm
+BT /F1 7 Tf 8.4 TL ET
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 58.51969 575.574 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 15.4 Tm /F1 9.8 Tf 12.6 TL (Implemented RAG pipelines with Pinecone and Chroma, coding embedding, hybrid search, reranking and) Tj T* (answer-grading steps to keep responses grounded and reduce hallucinations.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 549.874 cm
+BT /F1 7 Tf 8.4 TL ET
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 58.51969 549.874 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 15.4 Tm /F1 9.8 Tf 12.6 TL (Developed a unified model-routing layer across OpenAI and Azure OpenAI, and deployed AI services with) Tj T* (FastAPI, Redis and Docker.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 530.874 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 2.2 Tm /F2 10.8 Tf 13 TL (PROJECTS) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 528.274 cm
+q
+.6 w
+1 J
+.066667 .066667 .066667 RG
+n 0 0 m 498.2362 0 l S
+Q
+Q
+q
+1 0 0 1 48.51969 511.674 cm
+q
+BT 1 0 0 1 0 2.6 Tm 12.6 TL /F2 9.8 Tf .066667 .066667 .066667 rg (Enerfrog SQL Chatbot \226 Multi-Agent Text-to-SQL Assistant ) Tj /F1 10 Tf (\(Client\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 486.474 cm
+BT /F1 7 Tf 8.4 TL ET
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 58.51969 486.474 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 15.4 Tm /F1 9.8 Tf 12.6 TL (Built a LangGraph multi-agent chatbot, using a supervisor and orchestrator design, that answers business) Tj T* (questions from a 15-table PostgreSQL database, achieving 95% answer accuracy.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 448.174 cm
+BT /F1 7 Tf 8.4 TL ET
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 29.8 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 58.51969 448.174 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 28 Tm /F1 9.8 Tf 12.6 TL (Designed the orchestration layer: a main agent performs intent and entity extraction over the query and) Tj T* (conversation history, builds a shared state, and dynamically routes it to specialised agents based on the data) Tj T* (needed.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 422.474 cm
+BT /F1 7 Tf 8.4 TL ET
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 58.51969 422.474 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 15.4 Tm /F1 9.8 Tf 12.6 TL (Grounded every response with record-level citations \(unique IDs from the source tables\), making answers) Tj T* (traceable, verifiable and resistant to hallucination.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 409.374 cm
+BT /F1 7 Tf 8.4 TL ET
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 4.6 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 58.51969 409.374 cm
+q
+BT 1 0 0 1 0 2.8 Tm 12.6 TL /F2 9.8 Tf .066667 .066667 .066667 rg (Tech Stack:) Tj /F1 9.8 Tf ( Python, FastAPI, LangGraph, OpenAI, Gemini, MCP, PostgreSQL) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 392.774 cm
+q
+BT 1 0 0 1 0 2.6 Tm 12.6 TL /F2 9.8 Tf .066667 .066667 .066667 rg (Steadywell OS \226 AI Calling & Scheduling Automation ) Tj /F1 10 Tf (\(Client\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 367.574 cm
+BT /F1 7 Tf 8.4 TL ET
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 58.51969 367.574 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 15.4 Tm /F1 9.8 Tf 12.6 TL (Built an AI voice agent that autonomously calls to book, confirm and reschedule appointments, using OpenAI,) Tj T* (VAPI and Retell AI.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 341.874 cm
+BT /F1 7 Tf 8.4 TL ET
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 58.51969 341.874 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 15.4 Tm /F1 9.8 Tf 12.6 TL (Created event-driven pipelines triggering AI calls from scheduling events, handling 2,000+ calls per month;) Tj T* (classified call outcomes to drive automated follow-ups, reducing manual workflow by ~80%.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 328.774 cm
+BT /F1 7 Tf 8.4 TL ET
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 4.6 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 58.51969 328.774 cm
+q
+BT 1 0 0 1 0 2.8 Tm 12.6 TL /F2 9.8 Tf .066667 .066667 .066667 rg (Tech Stack:) Tj /F1 9.8 Tf ( Python, FastAPI, PostgreSQL, OpenAI, VAPI, Retell AI) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 312.174 cm
+q
+BT 1 0 0 1 0 2.6 Tm 12.6 TL /F2 9.8 Tf .066667 .066667 .066667 rg (Dyre ID \226 Pet Health Prediction Platform ) Tj /F1 10 Tf (\(Client\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 286.974 cm
+BT /F1 7 Tf 8.4 TL ET
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 58.51969 286.974 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 15.4 Tm /F1 9.8 Tf 12.6 TL (Built ML models, now in production use by the client, predicting the top 10 likely health conditions for dogs and) Tj T* (cats ranked by risk level, with 92% top-10 accuracy.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 261.274 cm
+BT /F1 7 Tf 8.4 TL ET
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 17.2 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 58.51969 261.274 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 15.4 Tm /F1 9.8 Tf 12.6 TL (Processed 200,000+ veterinary and behavioral records, engineering 30+ features through preprocessing and) Tj T* (EDA; validated predictions with veterinary experts before deployment.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 248.174 cm
+BT /F1 7 Tf 8.4 TL ET
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 4.6 Tm (\177) Tj T* ET
+Q
+q
+1 0 0 1 58.51969 248.174 cm
+q
+BT 1 0 0 1 0 2.8 Tm 12.6 TL /F2 9.8 Tf .066667 .066667 .066667 rg (Tech Stack:) Tj /F1 9.8 Tf ( Python, TensorFlow, Scikit-Learn, Pandas) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 229.174 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 2.2 Tm /F2 10.8 Tf 13 TL (TECHNICAL SKILLS) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 226.574 cm
+q
+.6 w
+1 J
+.066667 .066667 .066667 RG
+n 0 0 m 498.2362 0 l S
+Q
+Q
+q
+1 0 0 1 48.51969 199.374 cm
+q
+BT 1 0 0 1 0 15.4 Tm 12.6 TL /F2 9.8 Tf .066667 .066667 .066667 rg (GenAI & Agents:) Tj /F1 9.8 Tf ( LangGraph, Multi-Agent Systems, Agentic AI, RAG, MCP, Prompt Engineering, LLM Evaluation,) Tj T* (AI Voice Agents \(VAPI, Retell AI\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 174.174 cm
+q
+BT 1 0 0 1 0 15.4 Tm 12.6 TL /F2 9.8 Tf .066667 .066667 .066667 rg (LLMs, Vector & Graph DBs:) Tj /F1 9.8 Tf ( OpenAI, Azure OpenAI, Gemini, OpenRouter, Groq, Cerebras, Pinecone, Chroma,) Tj T* (Weaviate, Neo4j, Kuzu) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 161.574 cm
+q
+BT 1 0 0 1 0 2.8 Tm 12.6 TL /F2 9.8 Tf .066667 .066667 .066667 rg (ML:) Tj /F1 9.8 Tf ( TensorFlow, Scikit-Learn, Pandas, NumPy, Feature Engineering, EDA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 148.974 cm
+q
+BT 1 0 0 1 0 2.8 Tm 12.6 TL /F2 9.8 Tf .066667 .066667 .066667 rg (Engineering & Cloud:) Tj /F1 9.8 Tf ( Python, SQL, FastAPI, PostgreSQL, Redis, Docker, Azure) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 129.974 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 2.2 Tm /F2 10.8 Tf 13 TL (CERTIFICATIONS) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 127.374 cm
+q
+.6 w
+1 J
+.066667 .066667 .066667 RG
+n 0 0 m 498.2362 0 l S
+Q
+Q
+q
+1 0 0 1 48.51969 112.774 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 2.8 Tm /F1 9.8 Tf 12.6 TL (Microsoft Certified: Azure AI Engineer Associate \(AI-102\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 93.77402 cm
+q
+.066667 .066667 .066667 rg
+BT 1 0 0 1 0 2.2 Tm /F2 10.8 Tf 13 TL (EDUCATION) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 91.17402 cm
+q
+.6 w
+1 J
+.066667 .066667 .066667 RG
+n 0 0 m 498.2362 0 l S
+Q
+Q
+q
+1 0 0 1 48.51969 76.57402 cm
+q
+BT 1 0 0 1 0 2.8 Tm 12.6 TL /F2 9.8 Tf .066667 .066667 .066667 rg (B.Tech, Computer Science) Tj /F1 9.8 Tf ( \227 Jaypee University of Information Technology, Solan | 2020 \226 2024 | CGPA: 8.3) Tj T* ET
+Q
+Q
+ 
+
+endstream
+endobj
+6 0 obj
+<<
+/F1 7 0 R
+/F2 8 0 R
+>>
+endobj
+7 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+8 0 obj
+<<
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+9 0 obj
+<<
+>>
+endobj
+10 0 obj
+<<
+/A <<
+/S /URI
+/Type /Action
+/URI (mailto\072vashistha\056harshit2002\100gmail\056com)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 316.8507 766.114 342.4385 777.874 ]
+/Subtype /Link
+/Type /Annot
+>>
+endobj
+11 0 obj
+<<
+/A <<
+/S /URI
+/Type /Action
+/URI (https\072\057\057www\056linkedin\056com\057in\057harshit\055vashistha\057)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 350.4353 766.114 387.4793 777.874 ]
+/Subtype /Link
+/Type /Annot
+>>
+endobj
+12 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Border [ 0 0 0 ]
+/Rect [ 395.47609 766.114 425.97369 777.874 ]
+/A <<
+/Type /Action
+/S /URI
+/URI (https\072\057\057github\056com\057ns\055harshit\055vashistha\0552347)
+>>
+>>
+endobj
+xref
+0 13
+0000000000 65535 f 
+0000000015 00000 n 
+0000000054 00000 n 
+0000000113 00000 n 
+0000000178 00000 n 
+0000000410 00000 n 
+0000010535 00000 n 
+0000010576 00000 n 
+0000010683 00000 n 
+0000010795 00000 n 
+0000010816 00000 n 
+0000011017 00000 n 
+0000011241 00000 n 
+trailer
+<<
+/Size 13
+/Root 3 0 R
+/Info 1 0 R
+>>
+startxref
+11462
+%%EOF
